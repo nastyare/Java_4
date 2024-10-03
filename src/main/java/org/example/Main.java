@@ -1,17 +1,28 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import lombok.SneakyThrows;
+import java.io.FileReader;
+import java.lang.reflect.Type;
+import java.util.List;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main {
+    //@SneakyThrows
+    /*public static void main(String[] args) {
+        Gson gson = new Gson();
+        Type visitorListType = new TypeToken<List<Visitor>>(){}.getType();
+        List<Visitor> visitors = gson.fromJson(new FileReader("books.json"), visitorListType);
+
+        printVisitorsAndCount(visitors);
     }
+
+    public static void printVisitorsAndCount(List<Visitor> visitors) {
+        System.out.println("Список посетителей:");
+        visitors.stream()
+                .map(visitor -> visitor.getName() + " " + visitor.getSurname())
+                .forEach(System.out::println);
+
+        System.out.println("\nОбщее количество посетителей: " + visitors.size());
+    }*/
 }
